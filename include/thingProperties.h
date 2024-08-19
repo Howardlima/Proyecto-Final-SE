@@ -13,7 +13,7 @@ const char DEVICE_KEY[]  = "ARDUINO_KEY";    // Secret device password
 
 
 float mlx_temperatura = 0;
-int pulse_sensor_bpm =0;
+int pulse_sensor_bpm = 0;
 
 void initProperties(){
 
