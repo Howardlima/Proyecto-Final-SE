@@ -17,9 +17,9 @@ Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 PulseSensorPlayground pulseSensor;
 LiquidCrystal_I2C lcd(PCF8574_ADDR_A21_A11_A01, 4, 5, 6, 16, 11, 12, 13, 14, POSITIVE);
 
-const int PulseWire = 33; // PulseSensor PURPLE WIRE connected to ANALOG PIN 0
-const int LED = LED_BUILTIN; // The on-board Arduino LED, close to PIN 13.
-int Threshold = 550; // Determine which Signal to "count as a beat" and which to ignore.
+const int PulseWire = 33; // Cable PURPLE del PulseSensor conectado al PIN ANALÓGICO 0
+const int LED = LED_BUILTIN; // El LED incorporado en la placa Arduino, cerca del PIN 13.
+int Threshold = 550; // Determina qué Señal contar como un latido y cuál ignorar. 
 const int buttonPin = 35; // Pin del botón
 
 volatile bool startMeasurement = false;
@@ -34,7 +34,7 @@ void IRAM_ATTR startMeasurementISR() {
 }
 
 void setup() {
-    // Connect to Arduino IoT Cloud
+    // Conexión con Arduino IoT Cloud
     initProperties();
     ArduinoCloud.begin(ArduinoIoTPreferredConnection);
     setDebugMessageLevel(2);
@@ -101,16 +101,16 @@ void TaskMeasureSensors(void* pvParameters) {
 
             if (pulseSensor.sawStartOfBeat()) {
                 heartRate = pulseSensor.getBeatsPerMinute();
-                Serial.println("♥  A HeartBeat Happened!");
-                Serial.print("BPM: ");
-                Serial.println(heartRate);
+                //Serial.println("♥  A HeartBeat Happened!");
+                //Serial.print("BPM: ");
+                //Serial.println(heartRate);
             }
 
-            Serial.print("Temp: ");
-            Serial.print(temperature);
+            //Serial.print("Temp: ");
+            //Serial.print(temperature);
             mlx_temperatura = temperature;
-            Serial.print(" C, Pulso: ");
-            Serial.println(heartRate);
+            //Serial.print(" C, Pulso: ");
+            //Serial.println(heartRate);
             pulse_sensor_bpm = heartRate;
 
             vTaskDelay(500 / portTICK_PERIOD_MS); // Leer sensores cada medio segundo
