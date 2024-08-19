@@ -4,11 +4,11 @@
 #include <Arduino_ConnectionHandler.h>
 #include <WiFi.h>
 
-const char DEVICE_LOGIN_NAME[]  = "1cb983e3-45bf-46db-bdeb-bd64ad171e4f";
+const char DEVICE_LOGIN_NAME[]  = "ARDUINO_LOGIN_NAME";
 
-const char SSID[]               = "NETLIFE-LIMA";    // Network SSID (name)
-const char PASS[]               = "0932144009";    // Network password (use for WPA, or use as key for WEP)
-const char DEVICE_KEY[]  = "HKAUMwudpjRsq5Oq4NHD@s#eb";    // Secret device password
+const char SSID[]               = "MY_NET";    // Network SSID (name)
+const char PASS[]               = "PASSWORD";    // Network password (use for WPA, or use as key for WEP)
+const char DEVICE_KEY[]  = "ARDUINO_KEY";    // Secret device password
 
 
 
